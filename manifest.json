@@ -1,0 +1,30 @@
+{
+  "name": "Binance Dynamic Buttons",
+  "version": "1.0",
+  "manifest_version": 2,
+  "options_page": "options.html",
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Binance Dynamic Buttons"
+  },
+  "content_scripts": [
+    {
+      "css": [ "css/main.css" ],
+      "matches": [
+        "https://www.binance.com/*",
+        "https://binance.com/*"
+      ],
+      "js": [ "main.js" ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "img/*"
+  ],
+  "permissions":[
+    "unlimitedStorage",
+    "https://www.binance.com/*",
+    "https://binance.com/*"
+  ]
+}
